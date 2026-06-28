@@ -1,0 +1,38 @@
+{
+  "name": "bdv-101-bookstore-assignment",
+  "version": "1.0.0",
+  "description": "Making a REST API for a bookstore for BDV 101 class.",
+  "keywords": [
+    "REST",
+    "API",
+    "Bookstore",
+    "JSON",
+    "Javascript"
+  ],
+  "homepage": "https://github.com/bren007pie/BDV-101-Bookstore-Assignment#readme",
+  "bugs": {
+    "url": "https://github.com/bren007pie/BDV-101-Bookstore-Assignment/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bren007pie/BDV-101-Bookstore-Assignment.git"
+  },
+  "license": "MIT",
+  "author": "Bren007pie",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "packages": "npm ls"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.7.3"
+  },
+  "devDependencies": {
+    "dotenv": "^17.4.2",
+    "nodemon": "^3.1.14"
+  }
+}

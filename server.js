@@ -21,9 +21,29 @@ db.once("open", () => console.log("Connected to database!!!")); // One time on o
 // Server set up and routing
 server.use(express.json()); //allows us to run middleware, so the server can accept JSON in before it's passed on.
 
+
+    // Actual Endpoints
+
 server.use('/books', bookRouter); // when the server receives a request to /books, it will use the code in routes/books.js 
 server.use('/users', userRouter); // when the server receives a request to /users, it will use the code in routes/users.js
 server.use('/authors', authorRouter); // when the server receives a request to /authors, it will use the code in routes/authors.js
+
+    // Basic Routing
+server.get('/', (req, res) => { // when the server receives a request to /
+    res.status(200).send("Welcome to the Bookstore! Please use the following endpoints: /books, /users, /authors");
+});
+
+server.post('/', (req, res) => { // when the server receives a POST request to /
+    res.status(200).send("POST request to the homepage. Please use the following endpoints: /books, /users, or /authors.");
+});
+
+server.patch('/', (req, res) => { // when the server receives a PATCH request to /
+    res.status(200).send("PATCH request to the homepage. Please use the following endpoints: /books, /users, or /authors.");
+});
+
+server.delete('/', (req, res) => { // when the server receives a DELETE request to /
+    res.status(200).send("DELETE request to the homepage. Please use the following endpoints: /books, /users, or /authors.");
+});
 
 server.listen(5000, () => {console.log('Node.js web server at port 5000 is running..')}); // listen for any incoming requests, has a callback function when the server is done running
 
